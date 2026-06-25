@@ -617,7 +617,17 @@ footer span { color: var(--rose); }
   color: var(--rose);
   animation: blink .8s infinite;
 }
+.wave{
+  display:inline-block;
+  animation:wave 2s infinite;
+}
 
+@keyframes wave{
+  0%,100%{transform:rotate(0)}
+  20%{transform:rotate(15deg)}
+  40%{transform:rotate(-10deg)}
+  60%{transform:rotate(15deg)}
+}
 @keyframes blink {
   50% {
     opacity: 0;
