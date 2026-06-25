@@ -56,7 +56,14 @@ const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
+window.addEventListener("scroll", () => {
+  const scroll =
+    window.scrollY /
+    (document.body.scrollHeight - window.innerHeight);
 
+  document.getElementById("progress-bar").style.width =
+    scroll * 100 + "%";
+});
 /* ── Scroll reveal ─────────────────────── */
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
@@ -106,3 +113,45 @@ function typeEffect() {
 }
 
 typeEffect();
+/* Theme Toggle */
+
+const themeBtn = document.getElementById("theme-toggle");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  document.documentElement.setAttribute(
+    "data-theme",
+    savedTheme
+  );
+
+  themeBtn.textContent =
+    savedTheme === "dark" ? "☀️" : "🌙";
+}
+
+themeBtn.addEventListener("click", () => {
+
+  const current =
+    document.documentElement.getAttribute("data-theme");
+
+  if (current === "dark") {
+
+    document.documentElement.removeAttribute("data-theme");
+
+    localStorage.setItem("theme", "light");
+
+    themeBtn.textContent = "🌙";
+
+  } else {
+
+    document.documentElement.setAttribute(
+      "data-theme",
+      "dark"
+    );
+
+    localStorage.setItem("theme", "dark");
+
+    themeBtn.textContent = "☀️";
+  }
+
+});

@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amna Bibi | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 <div class="particles">
@@ -20,9 +24,10 @@
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
   <div class="blob blob3"></div>
-
+<div id="progress-bar"></div>
   <!-- NAV -->
   <nav id="navbar">
+    
     <div class="logo">Amna.</div>
     <ul>
       <li><a href="#about">About</a></li>
@@ -30,6 +35,9 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+      <button id="theme-toggle" class="theme-toggle">
+  🌙
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -94,49 +102,117 @@
   <section id="skills">
     <span class="section-tag reveal">What I work with</span>
     <h2 class="section-title reveal">Skills</h2>
-    <div class="skills reveal">
-      <span class="skill-pill" style="animation-delay:0.05s">Python</span>
-      <span class="skill-pill" style="animation-delay:0.10s">Java</span>
-      <span class="skill-pill" style="animation-delay:0.15s">C++</span>
-      <span class="skill-pill" style="animation-delay:0.20s">C</span>
-      <span class="skill-pill" style="animation-delay:0.25s">HTML &amp; CSS</span>
-      <span class="skill-pill" style="animation-delay:0.30s">OOP</span>
-      <span class="skill-pill" style="animation-delay:0.35s">Data Structures</span>
-      <span class="skill-pill" style="animation-delay:0.40s">SystemVerilog</span>
-      <span class="skill-pill" style="animation-delay:0.45s">Reinforcement Learning</span>
-      <span class="skill-pill" style="animation-delay:0.50s">Problem Solving</span>
-    </div>
+  <div class="skills reveal">
+
+  <div class="skill-pill">
+    <i class="fa-brands fa-python"></i>
+    Python
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-brands fa-java"></i>
+    Java
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-solid fa-code"></i>
+    C++
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-solid fa-terminal"></i>
+    C
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-brands fa-html5"></i>
+    HTML
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-brands fa-css3-alt"></i>
+    CSS
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-solid fa-cubes"></i>
+    OOP
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-solid fa-database"></i>
+    Data Structures
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-solid fa-microchip"></i>
+    SystemVerilog
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-solid fa-robot"></i>
+    Reinforcement Learning
+  </div>
+
+  <div class="skill-pill">
+    <i class="fa-solid fa-lightbulb"></i>
+    Problem Solving
+  </div>
+
+</div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
-    <span class="section-tag reveal">What I've built</span>
-    <h2 class="section-title reveal">Projects</h2>
-    <div class="projects">
+ <section id="projects">
+  <span class="section-tag reveal">What I've built</span>
+  <h2 class="section-title reveal">Projects</h2>
 
-      <div class="project-card reveal" style="transition-delay:0.05s">
-        <div class="project-icon">🚁</div>
-        <h3>Autonomous Drone Fleet Simulator</h3>
-        <p>Multi-agent drone simulation featuring collision avoidance, formation control, and inter-drone communication modules.</p>
-        <span class="project-tag">Python · AI · Simulation</span>
-      </div>
+  <div class="projects">
 
-      <div class="project-card reveal" style="transition-delay:0.15s">
-        <div class="project-icon">🧠</div>
-        <h3>RL Bus Control Algorithm</h3>
-        <p>Deep Reinforcement Learning controller designed for communication bus optimization and latency reduction.</p>
-        <span class="project-tag">Python · Deep RL</span>
-      </div>
-
-      <div class="project-card reveal" style="transition-delay:0.25s">
-        <div class="project-icon">💣</div>
-        <h3>Minesweeper Game</h3>
-        <p>Console-based implementation featuring recursive reveal logic, flag placement, and win/loss mechanics.</p>
-        <span class="project-tag">Java · OOP · Logic</span>
-      </div>
-
+    <div class="project-card reveal">
+      <div class="project-icon">🚗</div>
+      <h3>Autonomous Deep PiCar</h3>
+      <p>Built an autonomous vehicle using Raspberry Pi 5 and a CNN model for real-time navigation.</p>
+      <span class="project-tag">Python · CNN · AI</span>
     </div>
-  </section>
+
+    <div class="project-card reveal">
+      <div class="project-icon">🚁</div>
+      <h3>Autonomous Drone Fleet Simulator</h3>
+      <p>Multi-agent drone simulation featuring formation control and collision avoidance.</p>
+      <span class="project-tag">Java · OOP · Simulation</span>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-icon">🧠</div>
+      <h3>RL Bus Control Algorithm</h3>
+      <p>Deep Reinforcement Learning controller for bus communication optimization.</p>
+      <span class="project-tag">Python · RL</span>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-icon">🚦</div>
+      <h3>Traffic Flow Optimization System</h3>
+      <p>Queue and graph-based traffic management system.</p>
+      <span class="project-tag">DSA · Graphs</span>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-icon">📋</div>
+      <h3>Task Manager SaaS</h3>
+      <p>Full-stack Kanban task management platform with authentication.</p>
+      <span class="project-tag">Full Stack</span>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-icon">💣</div>
+      <h3>Minesweeper Game</h3>
+      <p>Console-based game with recursive reveal logic.</p>
+      <span class="project-tag">Java · OOP</span>
+    </div>
+
+  </div>
+</section>
 
   <!-- CONTACT -->
   <section id="contact">
@@ -146,7 +222,7 @@
       <p class="contact-intro">I'm always open to discussing new projects, collaboration, or opportunities. Feel free to reach out!</p>
       <div class="contact-items">
         <div class="contact-row">
-          <div class="contact-icon">✉️</div>
+          <div class="contact-icon">📩</div>
           <div class="info">
             <span class="type">Email</span>
             <a href="mailto:abibi.ce46ceme@student.nust.edu.pk">abibi.ce46ceme@student.nust.edu.pk</a>
