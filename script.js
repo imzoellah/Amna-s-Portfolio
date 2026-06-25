@@ -65,3 +65,44 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 revealEls.forEach(el => observer.observe(el));
+/* ── Typing Animation ───────────────── */
+
+const roles = [
+  "Building intelligent systems",
+  "AI Enthusiast",
+  "Computer Engineering Student",
+  "Software Developer",
+  "Problem Solver"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typingEl = document.querySelector(".typing-text");
+
+function typeEffect() {
+
+  const current = roles[roleIndex];
+
+  if (!deleting) {
+    typingEl.textContent = current.substring(0, charIndex++);
+  } else {
+    typingEl.textContent = current.substring(0, charIndex--);
+  }
+
+  if (!deleting && charIndex > current.length) {
+    deleting = true;
+    setTimeout(typeEffect, 1500);
+    return;
+  }
+
+  if (deleting && charIndex < 0) {
+    deleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+  }
+
+  setTimeout(typeEffect, deleting ? 50 : 100);
+}
+
+typeEffect();
